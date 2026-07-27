@@ -1,14 +1,14 @@
 name: Generate ASSII Artwork
 on:
-  push
+  push:
 jobs:
   cowsay-ascii:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
-        uses: actions\checkout@v7
+        uses: actions/checkout@v7
       - name: Update apt Packages and Install cowsay
-        run: sudo apt-get update -y && sudo apt-get install cowsay -y
+        run:  apt-get update -y && apt-get install cowsay -y
       - name: Generate ASCII Artwork Dragon
         run: |
            cowsay -f dragon "Run and Cover" >> dragon.txt
