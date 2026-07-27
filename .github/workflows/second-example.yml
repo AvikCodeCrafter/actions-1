@@ -1,0 +1,20 @@
+name: My Second Workflow
+on: push
+
+jobs:
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v7
+
+      - name: Welcome Message
+        run: echo "Welcome To the Work of My Repo"
+
+      - name: List Files
+        run: ls -la
+
+      - name: Read Files
+        run: cat README.md
+          
