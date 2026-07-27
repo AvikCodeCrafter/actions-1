@@ -9,28 +9,12 @@ jobs:
             - name: Git Checkout
               uses: actions/checkout@v7 
               
-            - name: Welcome Message
-              run: echo "My First Github Actions Job"
+            - name: Linux Commands
+              run: | 
+                 echo "My First Github Actions Job"
+                 ls -lrth
+                 cat README.md
 
-            - name: List Files
-              run:  ls
-
-            - name: Read File
-              run: cat README.md
-
-    second-job:
-        runs-on: ubuntu-latest
-
-        steps:
-          - name: Git Checkout
-            uses: actions/checkout@v7
-
-          - name: Welcome Message
-            run: echo "Welcome To the Work of My Repo"
-
-          - name: List Files
-            run: ls -la
-
-          - name: Read Files
-            run: cat README.md          
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon " Run for Cover" >> dragon.txt
 
