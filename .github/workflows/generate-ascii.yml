@@ -8,7 +8,7 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v7
       - name: Update apt Packages and Install cowsay
-        run:  apt-get update -y && apt-get install cowsay -y
+        run:  sudo apt-get update -y && sudo apt-get install cowsay -y
       - name: Generate ASCII Artwork Dragon
         run: |
            cowsay -f dragon "Run and Cover" >> dragon.txt
