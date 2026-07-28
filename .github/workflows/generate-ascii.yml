@@ -8,5 +8,7 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v7
       - name: Executing the shell script
-        run: sudo ./ascii-script.sh
+        run: |
+          chmod +x ascii-script.sh
+          ./ascii-script.sh
   
