@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Git Checkout
-              uses: actions\checkout@v7
+              uses: actions/checkout@v7
             - name: Perform Installation
               run: sudo apt-get updaye -y && sudo apt-get install cowsay -y 
             - name: Perform steps
