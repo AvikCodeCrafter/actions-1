@@ -8,7 +8,7 @@ jobs:
             - name: Git Checkout
               uses: actions/checkout@v7
             - name: Perform Installation
-              run: sudo apt-get updaye -y && sudo apt-get install cowsay -y 
+              run: sudo apt-get update -y && sudo apt-get install cowsay -y 
             - name: Perform steps
               run: |
                  cowsay -f dragon "Move or I will burn" >> dragon.txt
