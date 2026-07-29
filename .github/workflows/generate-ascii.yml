@@ -1,6 +1,6 @@
 name: Generate ASSII Artwork
 on:
-  push:
+  workflow_dispatch: 
 jobs:
   buil_job_1:
     runs-on: ubuntu-latest
