@@ -1,6 +1,11 @@
 name: Generate ASSII Artwork
 on:
   workflow_dispatch: 
+  
+concurrency: 
+  group: Production-Deployment
+  cancel-in-progress: true
+  
 jobs:
   buil_job_1:
     runs-on: ubuntu-latest
