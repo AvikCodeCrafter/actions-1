@@ -33,6 +33,8 @@ jobs:
           name: Dragon-File
       - name: Test File Exists
         run: grep -i "dragon" dragon.txt
+      - name: Sleep 
+        run: sleep 300  
   deploy_job_3:
     timeout-minutes: 1
     needs: test_job_2
