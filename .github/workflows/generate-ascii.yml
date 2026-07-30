@@ -8,6 +8,7 @@ concurrency:
   
 jobs:
   buil_job_1:
+    timeout-minutes: 1
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
@@ -22,6 +23,7 @@ jobs:
           name: Dragon-File
           path: dragon.txt  
   test_job_2:
+    timeout-minutes: 1
     needs: buil_job_1
     runs-on: ubuntu-latest
     steps:
@@ -32,6 +34,7 @@ jobs:
       - name: Test File Exists
         run: grep -i "dragon" dragon.txt
   deploy_job_3:
+    timeout-minutes: 1
     needs: test_job_2
     runs-on: ubuntu-latest
     steps:
