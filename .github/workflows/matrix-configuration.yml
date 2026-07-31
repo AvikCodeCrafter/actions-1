@@ -1,4 +1,4 @@
-name: Generate ASSII Artwork
+name: Matrux Configuration
 on:
   workflow_dispatch: 
   
