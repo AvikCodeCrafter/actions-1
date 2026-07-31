@@ -1,0 +1,28 @@
+name: Generate ASSII Artwork
+on:
+  workflow_dispatch: 
+  
+concurrency: 
+  group: Production-Deployment
+  cancel-in-progress: true
+  
+jobs:
+  deploy-on-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Docker Details
+        run: docker info
+      - name: Run Images
+        run: docker run hello-world
+      - name: Run Images
+        run: docker ps -a
+
+  deploy-on-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Echo Docker Details
+        run: docker info
+      - name: Run Images
+        run: docker run hello-world
+      - name: Run Images
+        run: docker ps -a   
